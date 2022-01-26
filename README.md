@@ -2,4 +2,4 @@
 
 ![](https://github.com/BillyFrcs/RacerEternity/blob/master/Assets/Gif/RacerEternity.gif)
 
-Racer Eternity is a simple prototype car driving simulator game that use advanced implementations with physics engine & simulation. And also this project is created with Universal Render Pipeline(URP).
+Racer Eternity is a simple prototype 3D driving car simulator game, that use advanced implementations with physics engine & simulation. And also this project is created using Universal Render Pipeline(URP).
