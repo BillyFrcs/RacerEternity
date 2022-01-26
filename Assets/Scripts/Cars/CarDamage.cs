@@ -39,7 +39,7 @@ namespace Cars
         private VertexCollision[] _OriginalVertexData;
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             if (optionalMeshList.Length > 0)
             {
@@ -59,7 +59,7 @@ namespace Cars
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             // Repair car when pressed R key
             if (Input.GetKeyDown(KeyCode.R))

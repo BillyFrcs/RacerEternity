@@ -10,14 +10,8 @@ namespace CameraGame
         private float _vertical;
         private float _horizontal;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             // 1
             var xValue = Input.GetAxis("Horizontal") * _movementSpeed * Time.deltaTime;

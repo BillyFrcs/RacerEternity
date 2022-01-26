@@ -141,22 +141,20 @@ namespace Cars
 
         public static CarController InstanceCarController;
 
-        // Wheels Setting ///////////////////////////////
+        // Wheels Setting
         public CarWheels carWheels;
 
-        // Lights Setting //////////////////////////////
+        // Lights Setting
         public CarLights carLights;
 
-        // Car sounds //////////////////////////////////
+        // Car sounds
         public CarSounds carSounds;
 
-        // Car Particle /////////////////////////////////
+        // Car Particle
         public CarParticles carParticles;
 
-        // Car Engine Setting ///////////////////////////
+        // Car Engine Setting
         public CarSetting carSetting;
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         private float _steer = 0f;
         private float _accel = 0.0f;
@@ -198,14 +196,12 @@ namespace Cars
 
         [HideInInspector] public bool Backward = false;
 
-        ////////////////////////////////////////////// TouchMode (Control) ////////////////////////////////////////////////////////////////////
+        // TouchMode (Control)
 
         [HideInInspector] public float accelFwd = 0.0f;
         [HideInInspector] public float accelBack = 0.0f;
         [HideInInspector] public float steerAmount = 0.0f;
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+        
         private float _wantedRPM = 0.0f;
         private float w_rotate;
         private float _slip;
@@ -216,9 +212,7 @@ namespace Cars
         private Vector3 _SteerCurAngle;
 
         private Rigidbody _MyRigidbody;
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+        
         private WheelComponent[] _Wheels;
 
         private float _target;
@@ -249,9 +243,7 @@ namespace Cars
 
             return Result;
         }
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+        
         private void SetCarWheelsSettingComponent()
         {
             if (carSetting.automaticGear)
@@ -320,7 +312,7 @@ namespace Cars
         }
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             // Using this for instance static object
             if (InstanceCarController == null)
@@ -345,11 +337,9 @@ namespace Cars
             }
             */
         }
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+        
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if (!carSetting.automaticGear && activeControl)
             {

@@ -21,7 +21,7 @@ namespace Skidmark
         private WheelCollider _wheelCol; //To hold self wheel collider
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             //Get the Wheel Collider attached to self
             skidCaller = transform.root.gameObject;
@@ -66,6 +66,7 @@ namespace Skidmark
 
                 _lastSkidmark = _skidmarks.AddSkidMark(skidPoint, GroundHit.normal, wheelSlipAmount / INTENSITY, _lastSkidmark);
             }
+            
             /*
             else
             {

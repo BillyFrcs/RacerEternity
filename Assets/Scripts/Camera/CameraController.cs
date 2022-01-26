@@ -191,7 +191,7 @@ namespace CameraGame
         */
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             _CarController = (CarController) TargetCar.GetComponent<CarController>();
 
@@ -238,7 +238,7 @@ namespace CameraGame
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if (!TargetCar)
                 return;
@@ -319,7 +319,7 @@ namespace CameraGame
             }
         }
 
-        float AdjustLineOfSight(Vector3 target, Vector3 direction)
+        private float AdjustLineOfSight(Vector3 target, Vector3 direction)
         {
             // RaycastHit hit;
 

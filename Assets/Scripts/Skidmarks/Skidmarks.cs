@@ -39,7 +39,7 @@ namespace Skidmark
         public bool skidmake = false;
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             //check if at the origin or not and jump to it if not
             if (transform.position != new Vector3(0f, 0f, 0f))

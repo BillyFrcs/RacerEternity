@@ -20,7 +20,7 @@ namespace Lights
         private float timer = 0.0f;
         private int lightNum = 0;
 
-        void Awake()
+        private void Awake()
         {
             if (policeAudioClips.Length > 0)
             {
@@ -30,14 +30,8 @@ namespace Lights
             }
         }
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if (!activeLight)
             {
