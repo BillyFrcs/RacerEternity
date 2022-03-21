@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -138,8 +139,6 @@ namespace Cars
         public ControlGameMode controlMode = ControlGameMode.KEYBOARD;
 
         public bool activeControl = false;
-
-        public static CarController InstanceCarController;
 
         // Wheels Setting
         public CarWheels carWheels;
@@ -314,12 +313,6 @@ namespace Cars
         // Start is called before the first frame update
         private void Start()
         {
-            // Using this for instance static object
-            if (InstanceCarController == null)
-            {
-                InstanceCarController = this;
-            }
-
             // Check for shader model 4.5 or better support
             if (SystemInfo.graphicsShaderLevel >= 45)
             {
@@ -1077,6 +1070,11 @@ namespace Cars
             GUI.Label(new Rect(15f, 50f, 500f, 500f), $"RPM {Mathf.Floor(_wantedRPM)}");
             GUI.Label(new Rect(15f, 70f, 500f, 500f), $"Km/h {Mathf.Floor(speed)}");
             GUI.Label(new Rect(15f, 90f, 500f, 500f), $"Gear {currentGear}");
+        }
+
+        private void OnApplicationFocus(bool hasFocus)
+        {
+            Cursor.lockState = hasFocus ? CursorLockMode.Locked : CursorLockMode.None;
         }
     }
 }
