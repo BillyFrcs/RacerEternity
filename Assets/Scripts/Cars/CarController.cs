@@ -1017,13 +1017,13 @@ namespace Cars
 
         private void PitchCarSetting()
         {
-            // calculate pitch (keep it within reasonable bounds)
+            // Calculate pitch (keep it within reasonable bounds)
             _pitchSound =
                 Mathf.Clamp(1.2f + (motorRPM - carSetting.idleRPM) / (carSetting.shiftUpRPM - carSetting.idleRPM), 1.0f, 10.0f);
 
             _shiftTime = Mathf.MoveTowards(_shiftTime, 0.0f, 0.1f);
 
-            // if (_pitchSound == 1f) // Warning
+            // if (_pitchSound == 1f) // Warning message
             if (Mathf.Abs(_pitchSound) <= 1f)
             {
                 carSounds.IdleEngine.volume = Mathf.Lerp(carSounds.IdleEngine.volume, 1.0f, 0.1f);
