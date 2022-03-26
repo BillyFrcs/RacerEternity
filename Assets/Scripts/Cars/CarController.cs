@@ -964,6 +964,9 @@ namespace Cars
                 }
                 else if (controlMode == ControlGameMode.TOUCH)
                 {
+                    _accel = accelFwd != 0f ? accelFwd : accelBack;
+
+                    /*
                     if (accelFwd != 0f)
                     {
                         _accel = accelFwd;
@@ -972,6 +975,7 @@ namespace Cars
                     {
                         _accel = accelBack;
                     }
+                    */
 
                     const float MAX_DELTA_TOUCH = 0.07f;
 
